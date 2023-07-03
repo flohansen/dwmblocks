@@ -1,0 +1,4 @@
+#!/bin/bash
+INTERFACE=$1
+
+echo " $(ip address show dev $INTERFACE | awk '/inet / { print $2 }' | sed 's/\/.*//')"
